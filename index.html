@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Foodflix</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="style.css" />
 </head>
 <body>
     <header>
@@ -20,8 +20,9 @@
     <main>
     <section>
         <h1> Step one: Recipe</h1>
-        <button class="btn btn-info btn-block">Click for recipe!</button>
+        <button class="btn btn-info btn-block" id="randomRecipe">Click for recipe!</button>
         <button class="btn btn-info btn-block">Save for later</button>
+        <div id="recipeResult"></div>
     </section>
 
     <section>
@@ -40,6 +41,6 @@
             <p> Saved Favorites </p>
         </section>
     </main>
-    <script src="assets/js/script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
