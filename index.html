@@ -4,42 +4,78 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Foodflix</title>
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>FoodFlix</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylsheet" href="./Assets/style.css">
 </head>
 <body>
-    <header>
-    <h1>Food-Flix</h1>
-    <h2>How It Works</h2>
-        <p> Are you and your partner indecisive? Struggle with what movie to watch, what food to eat?
-            Don't worry, let Food-Flix decide for you with our random evening generator! Just click the 
-            button for your random FoodFlix date night!
-        </p>
-    </header>
-
-    <main>
-    <section>
-        <h1> Step one: Recipe</h1>
-        <button class="btn btn-info btn-block">Click for recipe!</button>
-        <button class="btn btn-info btn-block">Save for later</button>
-    </section>
-
-    <section>
-        <h1> Step two: Movie</h1>
-        <button class="btn btn-info btn-block">Click for movie!</button>
-        <button class="btn btn-info btn-block">Save for later</button>
-    </section>
-
-        <section>
-            <p> Enjoy your night!
-                You're Welcome
-            </p>
-        </section>
-
-        <section>
-            <p> Saved Favorites </p>
-        </section>
-    </main>
-    <script src="assets/js/script.js"></script>
-</body>
+  <section class="hero is-danger">
+    <div class="hero-body">
+      <p class="title">
+        Food-Flix
+      </p>
+    </div>
+  </section>
+  <section class="section is-medium">
+    <h1 class="title">How it works</h1>
+    <h2 class="subtitle">
+     <strong>Are you and your partner indecisive? Struggle with what movie to watch? What food to eat? Don’t worry, let Food-Flix decide for you with our random evening generator! Just click the button for your random FoodFlix date night!</strong> 
+    </h2>
+  </section>
+  <div class="tile is-ancestor">
+    <div class="tile is-4 is-vertical is-parent">
+      <div class="tile is-child box">
+        <button class="button is-medium is-fullwidth">Click for recipe!</button>
+      </div>
+      <div class="tile is-child box">
+        <button class="button is-medium is-fullwidth">Save movie for later</button>
+      </div>
+    </div>
+    <div class="tile is-parent">
+      <div class="tile is-child box">
+        <p class="title">Recipe listed here with image</p>
+      </div>
+    </div>
+  </div>
+  <div class="tile is-ancestor">
+    <div class="tile is-4 is-vertical is-parent">
+      <div class="tile is-child box">
+        <button class="button is-medium is-fullwidth">Click for movie!</button>
+      </div>
+      <div class="tile is-child box">
+        <button class="button is-medium is-fullwidth">Save recipe for later</button>
+      </div>
+    </div>
+    <div class="tile is-parent">
+      <div class="tile is-child box">
+        <p class="title">Brief movie description and image here</p>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="notification is-primary">
+      <strong> Enjoy your night! </strong>
+    </div>
+  </div>
+  <div class="container">
+    <div class="button is-medium is-fullwidth">
+      <strong> Saved Favorites</strong>
+    </div>
+    <div class="columns">
+      <div class="column is-full">
+        First column
+      </div>
+      <div class="column is-full">
+        Second column
+      </div>
+      <div class="column is-full">
+        Third column
+      </div>
+      <div class="column is-full">
+        Fourth column
+      </div>
+    </div>
+  </div>
+  </body>
 </html>
