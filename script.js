@@ -7,6 +7,13 @@ var getRecipe = (recipe) =>{
         console.log(posts)
         var recipeTitle = document.getElementById('recipeResult')
         recipeTitle.textContent = posts.recipes[0].title
+        var ingredients = posts.recipes[0].extendedIngredients
+        for (var i = 0; i < ingredients.length; i++) {
+            var element = ingredients[i];
+            console.log(element);
+            var foodName = document.getElementById('ingredientResult')
+            foodName.textContent = element.original
+        }
     })
 }
 
