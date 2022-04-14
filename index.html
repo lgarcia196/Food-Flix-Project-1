@@ -4,48 +4,90 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Foodflix</title>
     
 </head>
+    <title>🍿Food-Flix🎬</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylsheet" href="./Assets/css/style.css">
+</head>
+
 <body>
-    <header>
-    <h1>Food-Flix</h1>
-    <h2>How It Works</h2>
-        <p> Are you and your partner indecisive? Struggle with what movie to watch, what food to eat?
-            Don't worry, let Food-Flix decide for you with our random evening generator! Just click the 
-            button for your random FoodFlix date night!
-        </p>
-    </header>
-
-    <main>
-    <section>
-        <h1> Step one: Recipe</h1>
-        <button class="btn btn-info btn-block">Click for recipe!</button>
-        <button class="btn btn-info btn-block">Save for later</button>
-    </section>
-
-    <section>
-        <h1> Step two: Movie</h1>
-        <button class="btn btn-info btn-block" id="moviebtn">Click for movie!</button>
-        <button class="btn btn-info btn-block" id="savebtn">Save for later</button>
-        <div id="movie-title">1</div>
-        <div id="movie-crew">1</div>
-        <div id="movie-rating">1</div>
-        <img id="movie-img" alt="movie poster">
+  <section class="hero has-background-danger-light">
+    <div class="hero-body">   
+      <p class="title is-size-1 has-text-centered has-text-weight-semibold">
+        🍿Food-Flix🎬
+      </p>
+    </div>
+  </section>
+  <section class="section has-background-link-light">
+    <h1 class="title is-size-1 has-text-centered pb-5 has-text-weight-light my-0 py-1">How it works</h1>
+    <h2 class="subtitle-is-size-2 has-text-centered my-0">
+     <strong>Are you and your partner indecisive? Struggle with what movie to watch? What food to eat? Don’t worry, let Food-Flix decide for you with our random evening generator! Just click the button for your random FoodFlix date night!</strong> 
+    </h2>
+  </section>
+  <div class="tile is-ancestor">
+    <div class="tile is-4 is-vertical is-parent">
+      <div class="tile is-child box">
+        <button class="button is-medium is-fullwidth is-danger" id="randomRecipe">Click for recipe!</button>
+      </div>
+      <div class="tile is-child box">
+        <button class="button is-medium is-fullwidth is-danger" id="savebtn">Save recipe for later</button>
+      </div>
+    </div>
+    <div class="tile is-parent">
+      <div class="tile is-child has-background-success-light box">
+        <p class="title has-text-weight-light" id="recipeResult">Here is a recipe suggestion</p>
+      </div>
+    </div>
+  </div>
+  <div class="tile is-ancestor">
+    <div class="tile is-4 is-vertical is-parent">
+      <div class="tile is-child box">
+        <button class="button is-medium is-fullwidth is-danger" id="moviebtn">Click for movie!</button>
+      </div>
+      
+      <div class="tile is-child box">
+        <button class="button is-medium is-fullwidth is-danger" id="savebtn">Save movie for later</button>
+      </div>
+    </div>
+    <div class="tile is-parent">
+      <div class="tile is-child box has-background-primary-light">
+        <p class="title has-text-weight-light">Here is a movie suggestion</p>
+        <div id="movie-title"></div>
+        <div id="movie-crew"></div>
+        <div id="movie-rating"></div>
+        <img id="movie-img"></img>
         
-
-    </section>
-
-        <section>
-            <p> Enjoy your night!
-                You're Welcome
-            </p>
-        </section>
-
-        <section>
-            <p> Saved Favorites </p>
-        </section>
-    </main>
-    <script src="assets/js/script.js"></script>
-</body>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="notification is-light has-text-centered is-size-3 has-text-weight-light has-background-warning-light">
+      <strong> Enjoy your night! </strong>
+    </div>
+  </div>
+  <div class="container">
+    <div class="box mx-3 is-medium is-fullwidth has-text-centered has-background-white-ter">
+      <strong> Saved Favorites</strong>
+    </div>
+    <div class="columns has-background-white-ter">
+        <div class="column mx-3 is-full box has-text-centered">
+          Favorite 1
+        </div>
+        </div>
+        <div class="column mx-3 is-full box has-text-centered">
+          Favorite 2
+        </div>
+        <div class="column mx-3 is-full box has-text-centered">
+          Favorite 3
+        </div>
+        <div class="column mx-3 is-full box has-text-centered">
+          Favorite 4
+        </div>
+    </div>
+  </div>
+  <script src="./Assets/js/script.js"></script>
+  </body>
 </html>
