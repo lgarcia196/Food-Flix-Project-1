@@ -29,9 +29,10 @@ movieSearchBtn.addEventListener('click', function () {
     getMovie(movieBtnEl)
     console.log(movieBtnEl)
 });
-//=====
+
 var randomRecipeBtn = document.getElementById("randomRecipe");
 var saveRecipeBtn = document.getElementById('saveRecipe');
+var Favorites = document.getElementById('favoritesList')
 var recipeArray = JSON.parse(localStorage.getItem('recipes')) || [];
 
 var getRecipe = (recipe) =>{
@@ -54,11 +55,15 @@ var getRecipe = (recipe) =>{
         var directions = document.getElementById('instruction')
         directions.innerHTML = posts.recipes[0].instructions
         saveRecipeBtn.addEventListener('click', function() {
-            recipeArray.push(posts.recipes[0].title)
-            recipeArray.push(posts.recipes[0].sourceUrl)
+            recipeArray.push(posts.recipes[0].title + ' ' + posts.recipes[0].sourceUrl + ' ')
             localStorage.setItem('recipes', JSON.stringify(recipeArray))
-           
-            
+            for (var i = 0; i < recipeArray.length; i++) {
+                var element = recipeArray[i];
+                var savedRecipe = document.createElement('div')
+                savedRecipe.setAttribute('class', 'column mx-3 is-full box has-text-centered')
+                savedRecipe.append(recipeArray)
+                Favorites.append(savedRecipe)
+            }
         })
     })
 }
