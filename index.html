@@ -4,6 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Foodflix</title>
+    
+</head>
     <title>🍿Food-Flix🎬</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylsheet" href="./Assets/css/style.css">
@@ -29,29 +33,35 @@
         <button class="button is-medium is-fullwidth is-danger" id="randomRecipe">Click for recipe!</button>
       </div>
       <div class="tile is-child box">
-        <button class="button is-medium is-fullwidth is-danger">Save recipe for later</button>
+        <button class="button is-medium is-fullwidth is-danger" id="savebtn">Save recipe for later</button>
       </div>
     </div>
     <div class="tile is-parent">
       <div class="tile is-child has-background-success-light box">
         <img id="food-image"></img>
-        <p class="title has-text-weight-light" id="recipeResult">Recipe listed here with image</p>
-        <p id="instruction"></p>
+       <p class="title has-text-weight-light" id="recipeResult">Here is a recipe suggestion</p>
+       <p id="instruction"></p>
       </div>
     </div>
   </div>
   <div class="tile is-ancestor">
     <div class="tile is-4 is-vertical is-parent">
       <div class="tile is-child box">
-        <button class="button is-medium is-fullwidth is-danger">Click for movie!</button>
+        <button class="button is-medium is-fullwidth is-danger" id="moviebtn">Click for movie!</button>
       </div>
+      
       <div class="tile is-child box">
-        <button class="button is-medium is-fullwidth is-danger">Save movie for later</button>
+        <button class="button is-medium is-fullwidth is-danger" id="savebtn">Save movie for later</button>
       </div>
     </div>
     <div class="tile is-parent">
       <div class="tile is-child box has-background-primary-light">
-        <p class="title has-text-weight-light">Brief movie description and image here</p>
+        <p class="title has-text-weight-light">Here is a movie suggestion</p>
+        <div id="movie-title"></div>
+        <div id="movie-crew"></div>
+        <div id="movie-rating"></div>
+        <img id="movie-img"></img>
+        
       </div>
     </div>
   </div>
