@@ -11,7 +11,7 @@ var getRecipe = (recipe) =>{
         for (var i = 0; i < ingredients.length; i++) {
             var element = ingredients[i];
             console.log(element);
-            var foodName = document.getElementById('ingredientResult')
+            var foodName = document.createElement()
             foodName.textContent = element.original
         }
     })
