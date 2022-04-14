@@ -1,4 +1,6 @@
 var randomRecipeBtn = document.getElementById("randomRecipe");
+var saveRecipeBtn = document.getElementById('saveRecipe');
+var recipeArray = JSON.parse(localStorage.getItem('recipes')) || [];
 
 var getRecipe = (recipe) =>{
     fetch("https://api.spoonacular.com/recipes/random?apiKey=d9b79695fd2743d2a6de54efb96ffd14")
@@ -19,10 +21,17 @@ var getRecipe = (recipe) =>{
         }
         var directions = document.getElementById('instruction')
         directions.innerHTML = posts.recipes[0].instructions
+        saveRecipeBtn.addEventListener('click', function() {
+            recipeArray.push(posts.recipes[0].title)
+            recipeArray.push(posts.recipes[0].sourceUrl)
+            localStorage.setItem('recipes', JSON.stringify(recipeArray))
+           
+            
+        })
     })
 }
 
-randomRecipeBtn.addEventListener('click', function(){
+randomRecipeBtn.addEventListener('click', function() {
     var recipeBtnEl = document.getElementById('recipeResult')
     getRecipe(recipeBtnEl)
     console.log(recipeBtnEl)
