@@ -11,7 +11,8 @@ var getRecipe = (recipe) =>{
         for (var i = 0; i < ingredients.length; i++) {
             var element = ingredients[i];
             console.log(element);
-            var foodName = document.createElement()
+            var foodName = document.createElement('ol')
+            recipeTitle.append(foodName)
             foodName.textContent = element.original
         }
     })
