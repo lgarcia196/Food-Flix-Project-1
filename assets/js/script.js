@@ -5,6 +5,8 @@ var getRecipe = (recipe) =>{
     .then(res => res.json())
     .then(posts => {
         console.log(posts)
+        var foodImage = document.getElementById('food-image')
+        foodImage.setAttribute('src', posts.recipes[0].image)
         var recipeTitle = document.getElementById('recipeResult')
         recipeTitle.textContent = posts.recipes[0].title
         var ingredients = posts.recipes[0].extendedIngredients
@@ -15,6 +17,8 @@ var getRecipe = (recipe) =>{
             recipeTitle.append(foodName)
             foodName.textContent = element.original
         }
+        var directions = document.getElementById('instruction')
+        directions.innerHTML = posts.recipes[0].instructions
     })
 }
 
