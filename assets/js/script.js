@@ -38,7 +38,7 @@ function displayFav (){
         favMoviesContainer.append(div)   
     }
 }
-displayFav()
+displayFav();
 
 movieSearchBtn.addEventListener('click', function () {
     var movieBtnEl = document.getElementById('movie-placeholder')
