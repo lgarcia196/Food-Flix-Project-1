@@ -73,17 +73,21 @@ var getRecipe = (recipe) =>{
         saveRecipeBtn.addEventListener('click', function() {
             recipeArray.push(posts.recipes[0].title + ' ' + posts.recipes[0].sourceUrl + ' ')
             localStorage.setItem('recipes', JSON.stringify(recipeArray))
-            for (var i = 0; i < recipeArray.length; i++) {
-                var element = recipeArray[i];
-                var savedRecipe = document.createElement('div')
-                savedRecipe.setAttribute('class', 'column mx-3 is-full box has-text-centered')
-                savedRecipe.append(recipeArray)
-                Favorites.append(savedRecipe)
-            }
         })
-
+        
     })
 }
+
+function displayRecipe() {
+    for (var i = 0; i < recipeArray.length; i++) {
+        var element = recipeArray[i];
+        var savedRecipe = document.createElement('div')
+        savedRecipe.setAttribute('class', 'column mx-3 is-full box has-text-centered')
+        savedRecipe.append(recipeArray)
+        Favorites.append(savedRecipe)
+    }
+}
+displayRecipe();
 
 randomRecipeBtn.addEventListener('click', function() {
     var recipeBtnEl = document.getElementById('recipeResult')
