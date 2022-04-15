@@ -47,6 +47,9 @@ movieSearchBtn.addEventListener('click', function () {
 });
 
 var randomRecipeBtn = document.getElementById("randomRecipe");
+var saveRecipeBtn = document.getElementById('saveRecipe');
+var Favorites = document.getElementById('favoritesList')
+var recipeArray = JSON.parse(localStorage.getItem('recipes')) || [];
 
 var getRecipe = (recipe) =>{
     fetch("https://api.spoonacular.com/recipes/random?apiKey=d9b79695fd2743d2a6de54efb96ffd14")
@@ -62,12 +65,25 @@ var getRecipe = (recipe) =>{
             var foodName = document.createElement()
             foodName.textContent = element.original
         }
+        var directions = document.getElementById('instruction')
+        directions.innerHTML = posts.recipes[0].instructions
+        saveRecipeBtn.addEventListener('click', function() {
+            recipeArray.push(posts.recipes[0].title + ' ' + posts.recipes[0].sourceUrl + ' ')
+            localStorage.setItem('recipes', JSON.stringify(recipeArray))
+            for (var i = 0; i < recipeArray.length; i++) {
+                var element = recipeArray[i];
+                var savedRecipe = document.createElement('div')
+                savedRecipe.setAttribute('class', 'column mx-3 is-full box has-text-centered')
+                savedRecipe.append(recipeArray)
+                Favorites.append(savedRecipe)
+            }
+        })
+
     })
 }
 
-randomRecipeBtn.addEventListener('click', function(){
+randomRecipeBtn.addEventListener('click', function() {
     var recipeBtnEl = document.getElementById('recipeResult')
     getRecipe(recipeBtnEl)
     console.log(recipeBtnEl)
 })
-
