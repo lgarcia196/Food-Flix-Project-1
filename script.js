@@ -52,7 +52,7 @@ var Favorites = document.getElementById('favoritesList')
 var recipeArray = JSON.parse(localStorage.getItem('recipes')) || [];
 
 var getRecipe = (recipe) =>{
-    fetch("https://api.spoonacular.com/recipes/random?apiKey=186d0e934bc8452fbec84c83b21b1799")
+    fetch("https://api.spoonacular.com/recipes/random?apiKey=74e5452af37a4d95a101d6fac9939920")
     .then(res => res.json())
     .then(posts => {
         console.log(posts)
